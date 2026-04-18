@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Benefits Dashboard — Pranay Rudra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">PR</a>
+      <nav class="nav__links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#projects">Work</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a href="assets/Shiva_Pranay_Rudra_Resume.pdf" download class="btn btn--outline btn--sm">Download CV</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="cs-hero">
+      <div class="container">
+        <a href="index.html#projects" class="cs-hero__back">← Back to all work</a>
+        <div class="cs-hero__meta">
+          <span class="tag tag--accent">Web App</span>
+          <span class="tag">Dashboard Redesign</span>
+          <span class="tag">B2C</span>
+          <span class="tag">2024</span>
+        </div>
+        <h1 class="fade-up">Healthcare Benefits Dashboard</h1>
+        <p class="cs-hero__desc fade-up">
+          Redesigning a dense legacy insurance dashboard at Zelis — simplifying complex plan-comparison flows and reducing cognitive load for everyday users navigating their healthcare benefits.
+        </p>
+        <div class="cs-stats fade-up">
+          <div class="cs-stat"><strong>28%</strong><span>Drop in support tickets</span></div>
+          <div class="cs-stat"><strong>4.7</strong><span>CSAT score (from 4.2)</span></div>
+          <div class="cs-stat"><strong>Angular</strong><span>Implementation stack</span></div>
+          <div class="cs-stat"><strong>6 mo</strong><span>Full project timeline</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cs-cover fade-up" style="background: linear-gradient(135deg, #fdf2e8 0%, #f5dfc9 50%, #f0d4b8 100%);">
+        <div style="text-align:center; color: var(--c-text-3);">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🏥</div>
+          <p style="font-weight: 600; color: var(--c-text-2);">Healthcare Benefits Dashboard — Redesign</p>
+          <p style="font-size: 0.875rem;">Angular · TypeScript · Tailwind CSS</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cs-body">
+
+        <section class="fade-up">
+          <div class="section-label">01 — Problem</div>
+          <h2>A dashboard that created more questions than it answered</h2>
+          <p>At Zelis, I was embedded in a cross-functional team responsible for a web portal used by thousands of employees to manage their healthcare benefits. The existing dashboard had been built incrementally over 4 years, accruing complexity with every new benefit type added.</p>
+          <p>Users regularly called support to answer questions the dashboard should have answered automatically: "What's my deductible?" "Which plan covers my dentist?" "How much have I spent this year?"</p>
+          <div class="cs-callout">
+            <p>Support ticket analysis showed 60% of calls were information requests that could be self-served. The dashboard had the data — users just couldn't find it.</p>
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">02 — Research</div>
+          <h2>Understanding the mental model gap</h2>
+          <p>I partnered with a product manager to run a mixed-methods research sprint over three weeks:</p>
+          <ul>
+            <li><strong>Support ticket analysis</strong> — categorised 200 recent tickets to identify the top 10 information needs</li>
+            <li><strong>5-second tests</strong> — participants described what they thought the dashboard showed them; accuracy was 40%</li>
+            <li><strong>Card sorting</strong> — 12 participants sorted 30 benefit concepts to reveal their mental model</li>
+            <li><strong>Contextual inquiry</strong> — observed 4 users attempting real tasks with screen-share</li>
+          </ul>
+          <p>The core insight: users organised benefits by <em>life event</em> (doctor visit, prescription, dental checkup), not by benefit category (medical, pharmacy, dental). The dashboard was structured by category. They were speaking different languages.</p>
+          <div class="cs-image-block">
+            Card sorting results — users grouped by life event, not benefit category
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">03 — Define</div>
+          <h2>Reframing the information architecture</h2>
+          <p>Working with the product manager and engineering lead, I established three design principles for the redesign:</p>
+          <ul>
+            <li><strong>Answer the question before it's asked</strong> — surface "remaining deductible" and "last visit" in the first viewport</li>
+            <li><strong>Life-event navigation</strong> — restructure secondary navigation around common scenarios, not benefit types</li>
+            <li><strong>Plain language first</strong> — replace insurance jargon with plain English, with technical terms available on demand</li>
+          </ul>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">04 — Design</div>
+          <h2>Restructuring without rebuilding from scratch</h2>
+          <p>Given engineering constraints (existing Angular component library, PostgreSQL data model), a full rebuild wasn't feasible. I designed a restructuring: same data, completely rethought presentation layer.</p>
+          <p>Key design decisions:</p>
+          <ul>
+            <li><strong>Benefit summary cards</strong> — three prominently-placed cards (Medical, Dental, Vision) with the three most-asked metrics each, immediately visible on load</li>
+            <li><strong>Spend timeline</strong> — a simple bar chart replacing a raw data table for YTD expenditure</li>
+            <li><strong>Smart search</strong> — a "Find care" bar that accepted natural language ("Does my plan cover physiotherapy?")</li>
+            <li><strong>Deductible progress bar</strong> — a prominent visual tracker replacing a number that required mental calculation</li>
+          </ul>
+          <div class="cs-image-block">
+            Before / After — homepage: 14 cards → 3 summary cards + contextual detail
+          </div>
+          <p>I delivered Figma specs with annotated responsive breakpoints and a component inventory to the Angular team. My own engineering background helped bridge the gap — I could speak to implementation constraints directly in design reviews.</p>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">05 — Testing</div>
+          <h2>Validation and iteration</h2>
+          <p>Two rounds of usability testing with 5 participants each (recruited from existing user base with coordinator support):</p>
+          <ul>
+            <li><strong>Round 1</strong>: Moderate success — users found deductible info 80% faster, but the plan-comparison flow still confused 3 of 5 participants</li>
+            <li><strong>Round 2 (after plan-comparison redesign)</strong>: 95% task completion on top 5 tasks; qualitative feedback was markedly more positive</li>
+          </ul>
+          <p>We introduced a structured code review process for UI components that I championed — this reduced regression bugs in the design system by catching inconsistencies earlier.</p>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">06 — Outcome</div>
+          <h2>Measurable results</h2>
+          <ul>
+            <li>Support tickets dropped 28% within 60 days of launch</li>
+            <li>CSAT score improved from 4.2 to 4.7 over the following quarter</li>
+            <li>Time-on-task for "find my deductible status" fell from 3 min 40 sec to 28 sec in follow-up testing</li>
+            <li>The component library we built during this project was adopted as the team's design system baseline</li>
+          </ul>
+          <div class="cs-callout">
+            <p>The most impactful change wasn't visual — it was restructuring the information architecture to match users' mental models. Design and engineering alignment made it possible to ship without breaking the existing data infrastructure.</p>
+          </div>
+          <h3 style="margin-top: var(--sp-6); margin-bottom: var(--sp-3);">Tools used</h3>
+          <div class="cs-tools">
+            <span class="tag">Figma</span>
+            <span class="tag">Angular</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Maze (testing)</span>
+            <span class="tag">Docker</span>
+          </div>
+        </section>
+
+        <nav class="cs-nav">
+          <a href="case-study-rag.html" class="btn btn--outline">← Agentic RAG Interface</a>
+          <a href="case-study-mcp.html" class="btn btn--primary">Next: MCP Server UI →</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">PR</span>
+      <p class="footer__copy">Pranay Rudra · Munich, 2025</p>
+      <nav class="footer__nav">
+        <a href="index.html#hero">Top</a>
+        <a href="index.html#projects">Work</a>
+        <a href="mailto:rudra.shivapranay@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

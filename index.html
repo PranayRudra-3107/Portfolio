@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranay Rudra — UX Designer & Developer</title>
+  <meta name="description" content="Portfolio of Pranay Rudra — UX Designer and Software Developer specialising in AI-driven products and clean, purposeful interfaces." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ NAV ══ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__logo" aria-label="Home">PR</a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="assets/Shiva_Pranay_Rudra_Resume.pdf" download class="btn btn--outline btn--sm">Download CV</a>
+      <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="navMobile" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/Shiva_Pranay_Rudra_Resume.pdf" download class="btn btn--outline btn--sm">Download CV</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════ HERO ══ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__eyebrow fade-up">
+          <span class="badge">Available for opportunities</span>
+        </div>
+        <h1 class="hero__headline fade-up">
+          Designing systems<br />
+          <em>people actually use.</em>
+        </h1>
+        <p class="hero__sub fade-up">
+          I'm Pranay — a UX designer and software developer who bridges research,
+          interaction design, and engineering to build interfaces that feel effortless.
+        </p>
+        <div class="hero__cta fade-up">
+          <a href="#projects" class="btn btn--primary btn--lg">View my work</a>
+          <a href="#about" class="btn btn--ghost btn--lg">About me</a>
+        </div>
+        <div class="hero__scroll-hint fade-up" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ MARQUEE ══ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>UX Design</span><span>·</span>
+        <span>Interaction Design</span><span>·</span>
+        <span>Prototyping</span><span>·</span>
+        <span>User Research</span><span>·</span>
+        <span>Design Systems</span><span>·</span>
+        <span>AI/LLM Products</span><span>·</span>
+        <span>Frontend Engineering</span><span>·</span>
+        <span>Angular · TypeScript</span><span>·</span>
+        <span>Figma</span><span>·</span>
+        <span>UX Design</span><span>·</span>
+        <span>Interaction Design</span><span>·</span>
+        <span>Prototyping</span><span>·</span>
+        <span>User Research</span><span>·</span>
+        <span>Design Systems</span><span>·</span>
+        <span>AI/LLM Products</span><span>·</span>
+        <span>Frontend Engineering</span><span>·</span>
+        <span>Angular · TypeScript</span><span>·</span>
+        <span>Figma</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ ABOUT ══ -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-label fade-up">About</div>
+        <div class="about__grid">
+          <div class="about__text fade-up">
+            <h2 class="h2">Clarity is a<br /><em>design decision.</em></h2>
+            <p>I'm a Master's student in Applied Computer Science at TH Deggendorf, Munich, with 2+ years of industry experience building production software at Zelis and Aragen. My work sits at the intersection of thoughtful UX and solid engineering.</p>
+            <p>I approach every project with a researcher's curiosity and a developer's pragmatism — validating assumptions early, designing with real constraints in mind, and shipping things that actually hold up.</p>
+            <p>Outside work, I explore generative AI systems, build LLM tooling, and contribute to United AI e.V. — a student-led AI research collective.</p>
+            <div class="about__actions">
+              <a href="assets/Shiva_Pranay_Rudra_Resume.pdf" download class="btn btn--primary">Download CV</a>
+              <a href="#contact" class="btn btn--ghost">Get in touch</a>
+            </div>
+          </div>
+          <div class="about__right fade-up">
+            <div class="about__philosophy">
+              <h3 class="h5">Design Philosophy</h3>
+              <ul class="philosophy-list">
+                <li>
+                  <span class="philosophy-icon">01</span>
+                  <div>
+                    <strong>Research before pixels</strong>
+                    <p>I validate the problem before designing the solution. Every wireframe starts with a why.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="philosophy-icon">02</span>
+                  <div>
+                    <strong>Constraints are creative fuel</strong>
+                    <p>Technical limitations and business constraints produce better, more honest design decisions.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="philosophy-icon">03</span>
+                  <div>
+                    <strong>Ship, measure, iterate</strong>
+                    <p>Perfect design is the enemy of useful design. I favour fast feedback loops over long polish cycles.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="skills-grid">
+              <h3 class="h5">Skills</h3>
+              <div class="skills-tags">
+                <span class="tag">Figma</span>
+                <span class="tag">Wireframing</span>
+                <span class="tag">Prototyping</span>
+                <span class="tag">User Research</span>
+                <span class="tag">Usability Testing</span>
+                <span class="tag">Design Systems</span>
+                <span class="tag">Interaction Design</span>
+                <span class="tag">Angular</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">RAG / LLM</span>
+                <span class="tag">Docker</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ STATS ══ -->
+    <section class="stats section--sm" aria-label="Quick facts">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat fade-up">
+            <span class="stat__num">2+</span>
+            <span class="stat__label">Years of industry experience</span>
+          </div>
+          <div class="stat fade-up">
+            <span class="stat__num">5+</span>
+            <span class="stat__label">End-to-end projects shipped</span>
+          </div>
+          <div class="stat fade-up">
+            <span class="stat__num">4</span>
+            <span class="stat__label">Cloud certifications</span>
+          </div>
+          <div class="stat fade-up">
+            <span class="stat__num">2</span>
+            <span class="stat__label">Countries, 1 publication</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════ PROCESS ══ -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="section-label fade-up">Process</div>
+        <h2 class="h2 fade-up">How I design<br /><em>from problem to product.</em></h2>
+        <p class="section-sub fade-up">My process isn't linear — it's a structured loop that adapts to the project's complexity and the team's constraints.</p>
+        <div class="process__steps">
+          <div class="process-step fade-up">
+            <div class="process-step__num">01</div>
+            <div class="process-step__body">
+              <h3>Discover</h3>
+              <p>Stakeholder interviews, competitor analysis, existing data review. I frame the problem in terms of user jobs-to-be-done before any sketching happens.</p>
+              <div class="process-step__tools">
+                <span>User Interviews</span>
+                <span>Heuristic Evaluation</span>
+                <span>Affinity Mapping</span>
+              </div>
+            </div>
+          </div>
+          <div class="process-step fade-up">
+            <div class="process-step__num">02</div>
+            <div class="process-step__body">
+              <h3>Define</h3>
+              <p>Synthesise findings into a clear problem statement, personas, and measurable success criteria. This is the contract between design and the rest of the team.</p>
+              <div class="process-step__tools">
+                <span>Personas</span>
+                <span>User Journey Maps</span>
+                <span>HMW Statements</span>
+              </div>
+            </div>
+          </div>
+          <div class="process-step fade-up">
+            <div class="process-step__num">03</div>
+            <div class="process-step__body">
+              <h3>Design</h3>
+              <p>Low-fi sketches to high-fi Figma prototypes, grounded in the design system. I test early and often — with real users when possible, with heuristics when not.</p>
+              <div class="process-step__tools">
+                <span>Figma</span>
+                <span>Component Libraries</span>
+                <span>Usability Testing</span>
+              </div>
+            </div>
+          </div>
+          <div class="process-step fade-up">
+            <div class="process-step__num">04</div>
+            <div class="process-step__body">
+              <h3>Deliver</h3>
+              <p>Developer-ready specs, annotated components, and implementation support. My engineering background means I can close the gap between design intent and shipped product.</p>
+              <div class="process-step__tools">
+                <span>Design Tokens</span>
+                <span>Angular / TypeScript</span>
+                <span>Accessibility Audit</span>
+              </div>
+            </div>
+          </div>
+          <div class="process-step fade-up">
+            <div class="process-step__num">05</div>
+            <div class="process-step__body">
+              <h3>Measure</h3>
+              <p>Post-launch: task-completion rates, error rates, qualitative feedback, analytics. Data informs the next iteration rather than just validating the last one.</p>
+              <div class="process-step__tools">
+                <span>A/B Testing</span>
+                <span>Analytics</span>
+                <span>Retrospectives</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════ PROJECTS ══ -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section-label fade-up">Selected Work</div>
+        <h2 class="h2 fade-up">Projects</h2>
+        <p class="section-sub fade-up">Real systems built from scratch — AI, computer vision, supply-chain intelligence, and full-stack web.</p>
+
+        <!-- Featured Project 1: EUDR -->
+        <article class="case-card case-card--featured fade-up">
+          <div class="case-card__visual" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
+            <div class="case-card__mockup" aria-hidden="true">
+              <div class="browser-chrome">
+                <div class="browser-dots"><span></span><span></span><span></span></div>
+                <div class="browser-bar"></div>
+              </div>
+              <div class="browser-body">
+                <div class="mock-content mock-content--full">
+                  <div class="mock-split">
+                    <div class="mock-split__left">
+                      <div class="mock-line mock-line--wide"></div>
+                      <div class="mock-line mock-line--med"></div>
+                      <div class="mock-line mock-line--short"></div>
+                    </div>
+                    <div class="mock-split__right">
+                      <div class="mock-chart" style="background: linear-gradient(180deg,#c8e6c9,transparent); border-color: #4caf50;"></div>
+                    </div>
+                  </div>
+                  <div class="mock-cards" style="margin-top: 8px;">
+                    <div class="mock-card" style="background:#e8f5e9;"></div>
+                    <div class="mock-card" style="background:#fff3e0;"></div>
+                    <div class="mock-card" style="background:#ffebee;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card__body">
+            <div class="case-card__meta">
+              <span class="tag tag--accent">AI · Satellite · RegTech</span>
+              <span class="tag">2026</span>
+            </div>
+            <h3 class="h3">EUDR Compliance Verification System</h3>
+            <p class="case-card__desc">Automated satellite-based deforestation detection that verifies EU Deforestation Regulation compliance. Submit a farm polygon → Sentinel-2 satellite data fetched → AI change detection runs → legally-structured PDF Due Diligence Statement generated in under 90 seconds.</p>
+            <div class="case-card__impact">
+              <div class="impact-stat"><strong>&lt;90s</strong><span>per compliance report</span></div>
+              <div class="impact-stat"><strong>3 AI models</strong><span>Prithvi-100M · Gemma 2B · ViT</span></div>
+            </div>
+            <div class="case-card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Google Earth Engine</span>
+              <span class="tag">Sentinel-2</span>
+              <span class="tag">Gemma 2B/7B</span>
+              <span class="tag">Leaflet.js</span>
+            </div>
+            <a href="https://github.com/PranayRudra-3107/eudr_compliance" target="_blank" rel="noopener noreferrer" class="btn btn--primary">View on GitHub →</a>
+          </div>
+        </article>
+
+        <!-- Featured Project 2: Spherecast -->
+        <article class="case-card case-card--featured fade-up">
+          <div class="case-card__visual" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);">
+            <div class="case-card__mockup" aria-hidden="true">
+              <div class="browser-chrome">
+                <div class="browser-dots"><span></span><span></span><span></span></div>
+                <div class="browser-bar"></div>
+              </div>
+              <div class="browser-body">
+                <div class="mock-content mock-content--full">
+                  <div class="mock-nav-bar" style="background:#e1bee7;"></div>
+                  <div class="mock-input-row">
+                    <div class="mock-input"></div>
+                    <div class="mock-btn-sm" style="background:#7b1fa2;"></div>
+                  </div>
+                  <div class="mock-cards" style="margin-top:8px;">
+                    <div class="mock-card" style="height:56px; background:#f3e5f5;"></div>
+                    <div class="mock-card" style="height:56px; background:#f3e5f5;"></div>
+                  </div>
+                  <div class="mock-line mock-line--med" style="margin-top:8px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card__body">
+            <div class="case-card__meta">
+              <span class="tag tag--accent">RAG · Supply Chain · LLM</span>
+              <span class="tag">2026</span>
+            </div>
+            <h3 class="h3">Spherecast — Raw Material Intelligence</h3>
+            <p class="case-card__desc">Supply-chain intelligence API that identifies substitute components by analysing material specifications, compliance standards (RoHS/REACH/FDA), and pricing. Combines FAISS vector search with a knowledge graph and Gemma 26B LLM to return ranked substitutes with natural-language explanations.</p>
+            <div class="case-card__impact">
+              <div class="impact-stat"><strong>4-factor</strong><span>scoring: spec · compliance · cost · quality</span></div>
+              <div class="impact-stat"><strong>Hybrid</strong><span>vector + knowledge graph search</span></div>
+            </div>
+            <div class="case-card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">FAISS</span>
+              <span class="tag">Gemma 26B</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">SQLite</span>
+            </div>
+            <a href="https://github.com/PranayRudra-3107/Spherecast" target="_blank" rel="noopener noreferrer" class="btn btn--primary">View on GitHub →</a>
+          </div>
+        </article>
+
+        <!-- Project grid: smaller cards -->
+        <div class="proj-grid">
+
+          <article class="proj-card fade-up">
+            <div class="proj-card__header" style="background: linear-gradient(135deg,#e8f4fd,#c9e8f5);">
+              <span class="proj-card__icon">🤖</span>
+            </div>
+            <div class="proj-card__body">
+              <div class="proj-card__meta">
+                <span class="tag tag--accent">Deep Learning</span>
+                <span class="tag">2026</span>
+              </div>
+              <h3>LLM from Scratch</h3>
+              <p>GPT-style transformer built from the ground up — bigram baseline through full attention mechanism, positional encoding, and sampling strategies. Trained on The Wizard of Oz corpus. Delivered stable text generation with optimised batching.</p>
+              <div class="proj-card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Jupyter</span>
+                <span class="tag">Transformers</span>
+              </div>
+              <a href="https://github.com/PranayRudra-3107/LLM-from-Scratch" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="proj-card fade-up">
+            <div class="proj-card__header" style="background: linear-gradient(135deg,#fff8e1,#ffecb3);">
+              <span class="proj-card__icon">🚗</span>
+            </div>
+            <div class="proj-card__body">
+              <div class="proj-card__meta">
+                <span class="tag tag--accent">Computer Vision</span>
+                <span class="tag">2025</span>
+              </div>
+              <h3>Automatic Number Plate Recognition</h3>
+              <p>Real-time ANPR pipeline combining YOLOv8 (trained on 5,000+ images) for plate detection, OpenCV preprocessing (Gaussian blur, adaptive thresholding, morphological ops), and a custom CNN for character recognition. Works on both images and video streams.</p>
+              <div class="proj-card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">YOLOv8</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">CNN</span>
+              </div>
+              <a href="https://github.com/PranayRudra-3107/Automatic-Number-Plate-Recognition" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="proj-card fade-up">
+            <div class="proj-card__header" style="background: linear-gradient(135deg,#fce4ec,#f8bbd0);">
+              <span class="proj-card__icon">📊</span>
+            </div>
+            <div class="proj-card__body">
+              <div class="proj-card__meta">
+                <span class="tag tag--accent">ML · Regression</span>
+                <span class="tag">2026</span>
+              </div>
+              <h3>Car Price Prediction</h3>
+              <p>Machine learning pipeline for predicting used-car market prices using XGBoost regression. Covers feature engineering, hyperparameter tuning, and model evaluation on a real-world dataset.</p>
+              <div class="proj-card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">XGBoost</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Jupyter</span>
+              </div>
+              <a href="https://github.com/PranayRudra-3107/Car-Price-Prediction" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="proj-card fade-up">
+            <div class="proj-card__header" style="background: linear-gradient(135deg,#e8eaf6,#c5cae9);">
+              <span class="proj-card__icon">⚡</span>
+            </div>
+            <div class="proj-card__body">
+              <div class="proj-card__meta">
+                <span class="tag tag--accent">Full-Stack</span>
+                <span class="tag">2025</span>
+              </div>
+              <h3>Agile Robots</h3>
+              <p>Angular 20 web application for robot fleet management — built with TypeScript, SCSS, and Angular CLI. Component-driven architecture with Karma unit testing and a production-ready build pipeline.</p>
+              <div class="proj-card__tags">
+                <span class="tag">Angular</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">SCSS</span>
+              </div>
+              <a href="https://github.com/PranayRudra-3107/Agile-Robots" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub →</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects__footer fade-up">
+          <a href="https://github.com/PranayRudra-3107" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">View all repositories on GitHub →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ WORK EXPERIENCE ══ -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <div class="section-label fade-up">Work Experience</div>
+        <h2 class="h2 fade-up">Where I've<br /><em>built things.</em></h2>
+
+        <div class="timeline">
+
+          <article class="timeline-item fade-up">
+            <div class="timeline-item__marker"></div>
+            <div class="timeline-item__content">
+              <div class="timeline-item__header">
+                <div>
+                  <h3 class="timeline-item__role">Software Developer</h3>
+                  <p class="timeline-item__company">Zelis <span class="timeline-item__location">· Hyderabad, India</span></p>
+                </div>
+                <span class="timeline-item__period">Sept 2023 — Mar 2025</span>
+              </div>
+              <ul class="timeline-item__bullets">
+                <li>Built and improved web application features using <strong>Angular, TypeScript, and Tailwind CSS</strong>, integrating backend APIs with Node.js and PostgreSQL across multiple product areas.</li>
+                <li>Introduced a structured code review process adopted by the team — reduced regression rate and improved consistency across UI components.</li>
+                <li>Collaborated with cross-functional teams on testing and documentation; supported containerised deployments using Docker.</li>
+                <li>Contributed to the Zelis Ideathon — prototyped a data-driven feature concept using JavaScript, validating it through team demo sessions.</li>
+              </ul>
+              <div class="timeline-item__stack">
+                <span class="tag">Angular</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item fade-up">
+            <div class="timeline-item__marker"></div>
+            <div class="timeline-item__content">
+              <div class="timeline-item__header">
+                <div>
+                  <h3 class="timeline-item__role">Software Developer</h3>
+                  <p class="timeline-item__company">Aragen <span class="timeline-item__location">· Hyderabad, India</span></p>
+                </div>
+                <span class="timeline-item__period">Feb 2023 — Aug 2023</span>
+              </div>
+              <ul class="timeline-item__bullets">
+                <li>Developed and maintained <strong>ASP.NET web applications</strong> — implemented new features, resolved transactional issues, and integrated SQL Server databases.</li>
+                <li>Participated in design and architecture discussions to improve application performance, usability, and overall functionality.</li>
+              </ul>
+              <div class="timeline-item__stack">
+                <span class="tag">ASP.NET</span>
+                <span class="tag">C#</span>
+                <span class="tag">SQL Server</span>
+                <span class="tag">HTML/CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item fade-up">
+            <div class="timeline-item__marker timeline-item__marker--org"></div>
+            <div class="timeline-item__content">
+              <div class="timeline-item__header">
+                <div>
+                  <h3 class="timeline-item__role">Technical Member</h3>
+                  <p class="timeline-item__company">United AI e.V. <span class="timeline-item__location">· Deggendorf, Germany</span></p>
+                </div>
+                <span class="timeline-item__period">Jun 2025 — Present</span>
+              </div>
+              <ul class="timeline-item__bullets">
+                <li>Building ML and deep-learning foundations through project-based learning — explored reinforcement learning, generative models, and GANs.</li>
+                <li>Developing AI-based evaluation and analytics tooling for student workshop outcomes at TH Deggendorf.</li>
+              </ul>
+              <div class="timeline-item__stack">
+                <span class="tag">PyTorch</span>
+                <span class="tag">GANs</span>
+                <span class="tag">RL</span>
+                <span class="tag">Evaluation</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Education row -->
+        <div class="education-row fade-up">
+          <div class="education-card">
+            <span class="education-card__year">2025 — Present</span>
+            <h4>M.Sc. Applied Computer Science</h4>
+            <p>Technische Hochschule Deggendorf · Germany</p>
+          </div>
+          <div class="education-card">
+            <span class="education-card__year">2019 — 2023</span>
+            <h4>B.Sc. Computer Science</h4>
+            <p>B.V. Raju Institute of Technology, Narsapur · India</p>
+          </div>
+          <div class="education-card">
+            <span class="education-card__year">Certifications</span>
+            <h4>4 Cloud Certifications</h4>
+            <p>Azure Data Engineer · Azure AI · Azure Fundamentals · AWS Cloud Practitioner</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════ CONTACT ══ -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section-label fade-up">Contact</div>
+        <div class="contact__grid">
+          <div class="contact__left fade-up">
+            <h2 class="h2">Let's make<br /><em>something good.</em></h2>
+            <p>I'm open to full-time UX roles, internships, freelance projects, and research collaborations. If you think we could work well together, reach out.</p>
+            <div class="contact__links">
+              <a href="mailto:rudra.shivapranay@gmail.com" class="contact-link">
+                <span class="contact-link__icon">✉</span>
+                <span>rudra.shivapranay@gmail.com</span>
+              </a>
+              <a href="https://www.linkedin.com/in/pranay-rudra" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <span class="contact-link__icon">in</span>
+                <span>linkedin.com/in/pranay-rudra</span>
+              </a>
+              <a href="https://github.com/PranayRudra-3107" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <span class="contact-link__icon">gh</span>
+                <span>github.com/PranayRudra-3107</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact__right fade-up">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity or project..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">Send message →</button>
+              <p class="form-note" id="formStatus" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">PR</span>
+      <p class="footer__copy">Designed &amp; built by Pranay Rudra · Munich, 2025</p>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#hero">Top</a>
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="mailto:rudra.shivapranay@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

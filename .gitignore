@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Node (if a dev server is added later)
+node_modules/
+npm-debug.log*
+
+# Build output (if a bundler is added later)
+dist/
+build/
+
+# Environment files
+.env
+.env.local

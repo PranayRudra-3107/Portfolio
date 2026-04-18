@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agentic RAG Interface — Pranay Rudra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">PR</a>
+      <nav class="nav__links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#projects">Work</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a href="assets/Shiva_Pranay_Rudra_Resume.pdf" download class="btn btn--outline btn--sm">Download CV</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="cs-hero">
+      <div class="container">
+        <a href="index.html#projects" class="cs-hero__back">← Back to all work</a>
+        <div class="cs-hero__meta">
+          <span class="tag tag--accent">AI / LLM</span>
+          <span class="tag">UX Design</span>
+          <span class="tag">Research</span>
+          <span class="tag">2024</span>
+        </div>
+        <h1 class="fade-up">Agentic RAG Interface</h1>
+        <p class="cs-hero__desc fade-up">
+          Designing the user experience for a multi-step AI research assistant that surfaces document insights — making complex retrieval-augmented generation feel simple and trustworthy.
+        </p>
+        <div class="cs-stats fade-up">
+          <div class="cs-stat"><strong>40%</strong><span>Reduction in time-to-answer</span></div>
+          <div class="cs-stat"><strong>3×</strong><span>Faster iteration via eval pipeline</span></div>
+          <div class="cs-stat"><strong>LangGraph</strong><span>Orchestration engine</span></div>
+          <div class="cs-stat"><strong>8 wks</strong><span>Design + build cycle</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cs-cover fade-up" style="background: linear-gradient(135deg, #e8f4fd 0%, #c9e8f5 40%, #d4e8fa 100%);">
+        <div style="text-align:center; color: var(--c-text-3);">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
+          <p style="font-weight: 600; color: var(--c-text-2);">Agentic RAG — Conversational Research Interface</p>
+          <p style="font-size: 0.875rem;">Figma mockup · High-fidelity prototype</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cs-body">
+
+        <section class="fade-up">
+          <div class="section-label">01 — Problem</div>
+          <h2>The problem with AI research tools</h2>
+          <p>Teams using RAG-based AI systems kept hitting the same wall: results arrived without context. Users couldn't tell <em>why</em> the system retrieved a particular chunk, <em>whether</em> it had checked multiple sources, or <em>how confident</em> the answer actually was.</p>
+          <p>The underlying LangGraph pipeline was sophisticated — implementing Self-RAG, Corrective RAG, and Adaptive RAG patterns — but the interface treated it like a simple chatbot. Users either over-trusted or completely distrusted the outputs.</p>
+          <div class="cs-callout">
+            <p>"I never know if it's making things up or if it actually searched the document. So I re-read everything anyway."<br /><strong>— Researcher during discovery interview</strong></p>
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">02 — Research</div>
+          <h2>Understanding how people reason with AI</h2>
+          <p>I conducted 6 contextual interviews with researchers and analysts who regularly used AI-assisted document review tools. Key themes emerged:</p>
+          <ul>
+            <li><strong>Provenance anxiety</strong> — users wanted to see the source, not just the answer</li>
+            <li><strong>Process opacity</strong> — multi-step agent reasoning was invisible and unsettling</li>
+            <li><strong>Calibration failure</strong> — confidence scores were shown numerically but not acted on behaviourally</li>
+            <li><strong>Recovery cost</strong> — when the system was wrong, finding the correct answer manually was slow</li>
+          </ul>
+          <p>I also ran a competitive analysis of Perplexity AI, Notion AI, and You.com to benchmark citation patterns and confidence communication.</p>
+          <div class="cs-image-block">
+            Affinity map — 6 user interviews · 38 coded observations · 4 themes
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">03 — Define</div>
+          <h2>Design goals</h2>
+          <p>From synthesis, I defined three non-negotiable design goals:</p>
+          <ul>
+            <li><strong>Make the agent's reasoning visible</strong> — show the retrieval steps, not just the final answer</li>
+            <li><strong>Ground every claim in a source</strong> — inline citations with hover-preview of original text</li>
+            <li><strong>Give users control over depth</strong> — progressive disclosure: summary first, detail on demand</li>
+          </ul>
+          <div class="cs-callout">
+            <p>How might we help users calibrate their trust in AI-generated answers without adding cognitive overhead?</p>
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">04 — Design</div>
+          <h2>From sketches to high-fidelity</h2>
+          <p>I ran two rounds of wireframing. The first explored three distinct layout patterns: a linear chat, a split-pane document viewer, and a "research journal" with expandable reasoning nodes. User walkthroughs favoured the split-pane for complex queries, but the chat for quick lookups.</p>
+          <p>The final design uses an adaptive layout: single-pane chat by default, expanding to a two-column document view when citations are surfaced.</p>
+          <div class="cs-image-block">
+            Wireframe iterations — Round 1: 3 concepts · Round 2: refined split-pane layout
+          </div>
+          <p>Key interface decisions:</p>
+          <ul>
+            <li><strong>Reasoning timeline</strong> — a collapsible "steps" panel showing which RAG strategy fired (retrieve → grade → re-query → generate)</li>
+            <li><strong>Inline citations</strong> — [¹] markers that expand to the source chunk on hover, no modal interruptions</li>
+            <li><strong>Confidence indicator</strong> — a colour-coded bar (green / amber / red) based on retrieval quality score, not raw model confidence</li>
+            <li><strong>Correction pathway</strong> — a "Refine this answer" affordance that re-triggers the corrective RAG loop with user guidance</li>
+          </ul>
+          <div class="cs-image-block">
+            High-fidelity prototype — Chat view with reasoning timeline expanded
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">05 — Testing</div>
+          <h2>Usability testing</h2>
+          <p>I ran moderated think-aloud sessions with 4 participants using a Figma prototype. Tasks included: find a specific regulation clause, compare two source documents, and identify a hallucinated answer.</p>
+          <ul>
+            <li>100% task completion on citation-lookup tasks (vs 60% baseline with original interface)</li>
+            <li>Hallucination detection improved: 3 of 4 users correctly identified the injected incorrect answer</li>
+            <li>The reasoning timeline was opened in 7 of 8 complex-query sessions — higher than expected</li>
+          </ul>
+          <p>One critical finding: users didn't understand the confidence bar without a label. Iteration added a plain-English descriptor ("High confidence · 4 sources verified").</p>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">06 — Outcome</div>
+          <h2>Impact</h2>
+          <p>After implementing the redesign alongside the LangGraph pipeline:</p>
+          <ul>
+            <li>Time-to-answer (task completion) dropped by ~40% in follow-up sessions</li>
+            <li>Hallucination detection rate increased to 75% from 40% with the old interface</li>
+            <li>The evaluation scripts I designed to measure hallucination rate and retrieval quality enabled 3× faster design iterations</li>
+          </ul>
+          <div class="cs-callout">
+            <p>The biggest lesson: AI interface design is fundamentally about calibrating trust, not just displaying information. The visual design is the confidence infrastructure.</p>
+          </div>
+          <h3 style="margin-top: var(--sp-6); margin-bottom: var(--sp-3);">Tools used</h3>
+          <div class="cs-tools">
+            <span class="tag">Figma</span>
+            <span class="tag">LangGraph</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Vector DBs</span>
+            <span class="tag">Miro</span>
+          </div>
+        </section>
+
+        <nav class="cs-nav">
+          <a href="index.html#projects" class="btn btn--outline">← All projects</a>
+          <a href="case-study-dashboard.html" class="btn btn--primary">Next: Healthcare Dashboard →</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">PR</span>
+      <p class="footer__copy">Pranay Rudra · Munich, 2025</p>
+      <nav class="footer__nav">
+        <a href="index.html#hero">Top</a>
+        <a href="index.html#projects">Work</a>
+        <a href="mailto:rudra.shivapranay@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servo — Service Marketplace — Pranay Rudra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">PR</a>
+      <nav class="nav__links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#projects">Work</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a href="assets/Shiva_Pranay_Rudra_Resume.pdf" download class="btn btn--outline btn--sm">Download CV</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="cs-hero">
+      <div class="container">
+        <a href="index.html#projects" class="cs-hero__back">← Back to all work</a>
+        <div class="cs-hero__meta">
+          <span class="tag tag--accent">Mobile App</span>
+          <span class="tag">Published Research</span>
+          <span class="tag">End-to-end UX</span>
+          <span class="tag">2023</span>
+        </div>
+        <h1 class="fade-up">Servo — Service Marketplace</h1>
+        <p class="cs-hero__desc fade-up">
+          End-to-end UX design for a mobile service-provider marketplace connecting people to local service professionals — from initial user research and journey mapping through to a published research paper at ICAISS 2023.
+        </p>
+        <div class="cs-stats fade-up">
+          <div class="cs-stat"><strong>Published</strong><span>ICAISS 2023 conference</span></div>
+          <div class="cs-stat"><strong>85%</strong><span>Task completion rate</span></div>
+          <div class="cs-stat"><strong>2</strong><span>User types designed for</span></div>
+          <div class="cs-stat"><strong>4 mo</strong><span>Research to prototype</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cs-cover fade-up" style="background: linear-gradient(135deg, #e8f7f0 0%, #c9eedd 50%, #b8e8d0 100%);">
+        <div style="text-align:center; color: var(--c-text-3);">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+          <p style="font-weight: 600; color: var(--c-text-2);">Servo — Service Providing Mobile App</p>
+          <p style="font-size: 0.875rem;">Published · ICAISS 2023 · Conference paper</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cs-body">
+
+        <section class="fade-up">
+          <div class="section-label">01 — Problem</div>
+          <h2>Finding reliable local services is still broken</h2>
+          <p>In India, the informal service economy is vast — electricians, plumbers, tutors, cleaners — but discovery is fragmented across WhatsApp groups, word-of-mouth, and unreliable directories. Trust between client and provider is a fundamental barrier to the first booking.</p>
+          <p>Existing platforms either targeted premium urban markets (UrbanClap / Urban Company) or were too generic. The gap was a trust-first, mobile-first experience built for Tier-2 and Tier-3 city users.</p>
+          <div class="cs-callout">
+            <p>The core design challenge wasn't the booking flow — it was building enough trust for a stranger to invite a service provider into their home on the first interaction.</p>
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">02 — Research</div>
+          <h2>Dual-sided research: users and providers</h2>
+          <p>Servo is a two-sided marketplace. I ran separate research tracks for each side:</p>
+          <p><strong>Clients (service seekers):</strong></p>
+          <ul>
+            <li>8 interviews across age groups 22–55 in Hyderabad</li>
+            <li>Key anxieties: overcharging, reliability, safety, no-shows</li>
+            <li>Mental model: "I want to see who they are before I confirm"</li>
+          </ul>
+          <p><strong>Service providers:</strong></p>
+          <ul>
+            <li>5 interviews with electricians, plumbers, and tutors</li>
+            <li>Key barriers: irregular income, no ability to showcase skills or reviews, difficulty managing bookings</li>
+            <li>Mental model: "If I do good work, I want the next customer to know that"</li>
+          </ul>
+          <div class="cs-image-block">
+            Dual journey map — client vs. provider: divergent needs, shared trust gap
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">03 — Define</div>
+          <h2>The trust system is the product</h2>
+          <p>From both research tracks, a unified theme emerged: the core UX challenge was designing a trust system, not just a booking flow.</p>
+          <p>Design principles:</p>
+          <ul>
+            <li><strong>Identity before action</strong> — provider profiles must establish credibility before a user sees pricing</li>
+            <li><strong>Verified signals only</strong> — review counts, verification badges, and response rate visible on the browse screen</li>
+            <li><strong>Provider agency</strong> — providers can set availability, decline requests, and build a portfolio</li>
+            <li><strong>Lightweight onboarding</strong> — registration under 3 minutes for both sides, with progressive profile completion</li>
+          </ul>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">04 — Design</div>
+          <h2>Designing for both sides of the marketplace</h2>
+          <p>The app comprises two distinct experiences within one product: the client-facing discovery/booking flow and the provider-facing availability/job management flow.</p>
+          <p><strong>Client experience:</strong></p>
+          <ul>
+            <li>Category browse → provider cards (photo, rating, verified badge, distance, hourly rate)</li>
+            <li>Provider profile with portfolio images, verified reviews, and response time</li>
+            <li>Booking flow: select service → pick time → confirm with estimated cost</li>
+            <li>In-app chat with read receipts for pre-job communication</li>
+          </ul>
+          <p><strong>Provider experience:</strong></p>
+          <ul>
+            <li>Job inbox with accept/decline/counter-propose</li>
+            <li>Availability calendar with block-off functionality</li>
+            <li>Earnings dashboard with job history</li>
+            <li>Profile builder with skill tags and portfolio upload</li>
+          </ul>
+          <div class="cs-image-block">
+            High-fidelity screens — client browse, provider profile, booking confirmation
+          </div>
+          <p>Design choices were grounded in the trust-first principle: the provider's photo, name, and review count appear before any pricing information. Price is the last thing shown, after trust signals are established.</p>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">05 — Testing</div>
+          <h2>Usability testing and the published findings</h2>
+          <p>I ran moderated usability testing with 10 participants (5 clients, 5 providers) using a Figma prototype:</p>
+          <ul>
+            <li>Overall task completion rate: 85%</li>
+            <li>Client booking flow completion: 90%</li>
+            <li>Provider job-acceptance flow: 80%</li>
+            <li>SUS (System Usability Scale) score: 76 — "Good"</li>
+          </ul>
+          <p>Key iteration from testing: providers initially didn't trust that accepting a job was binding. Adding a "confirmation screen" with job details summary before final acceptance resolved this.</p>
+          <p>The research methodology, findings, and design outcomes were written up and accepted at <strong>ICAISS 2023</strong> — the International Conference on Artificial Intelligence in Smart Systems.</p>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">06 — Outcome</div>
+          <h2>Results and reflection</h2>
+          <ul>
+            <li>Published at ICAISS 2023 — formal academic validation of the research and design approach</li>
+            <li>85% task completion across both user types in usability testing</li>
+            <li>The dual-sided research framework became a template I've used in subsequent projects</li>
+          </ul>
+          <div class="cs-callout">
+            <p>Designing a two-sided marketplace taught me that the product you're designing is the relationship between the two sides — not just the interface each side sees.</p>
+          </div>
+          <p>This was my first end-to-end UX project — from research brief to published paper. It established the research-first approach I've carried into every project since.</p>
+          <h3 style="margin-top: var(--sp-6); margin-bottom: var(--sp-3);">Tools used</h3>
+          <div class="cs-tools">
+            <span class="tag">Figma</span>
+            <span class="tag">User Interviews</span>
+            <span class="tag">Journey Mapping</span>
+            <span class="tag">Usability Testing</span>
+            <span class="tag">SUS Score</span>
+            <span class="tag">Academic Writing</span>
+          </div>
+        </section>
+
+        <nav class="cs-nav">
+          <a href="case-study-mcp.html" class="btn btn--outline">← MCP Server UI</a>
+          <a href="index.html#projects" class="btn btn--primary">All projects →</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">PR</span>
+      <p class="footer__copy">Pranay Rudra · Munich, 2025</p>
+      <nav class="footer__nav">
+        <a href="index.html#hero">Top</a>
+        <a href="index.html#projects">Work</a>
+        <a href="mailto:rudra.shivapranay@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

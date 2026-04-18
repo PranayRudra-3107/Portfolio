@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCP Server Management UI — Pranay Rudra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">PR</a>
+      <nav class="nav__links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#projects">Work</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a href="assets/Shiva_Pranay_Rudra_Resume.pdf" download class="btn btn--outline btn--sm">Download CV</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="cs-hero">
+      <div class="container">
+        <a href="index.html#projects" class="cs-hero__back">← Back to all work</a>
+        <div class="cs-hero__meta">
+          <span class="tag tag--accent">Developer Tool</span>
+          <span class="tag">B2D</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">2024</span>
+        </div>
+        <h1 class="fade-up">MCP Server Management UI</h1>
+        <p class="cs-hero__desc fade-up">
+          Designing a developer-facing control panel for managing Model Context Protocol servers — balancing technical depth with discoverability for teams with mixed levels of AI infrastructure expertise.
+        </p>
+        <div class="cs-stats fade-up">
+          <div class="cs-stat"><strong>60%</strong><span>Faster context-source onboarding</span></div>
+          <div class="cs-stat"><strong>0</strong><span>Critical errors in auth flow</span></div>
+          <div class="cs-stat"><strong>FastAPI</strong><span>Backend implementation</span></div>
+          <div class="cs-stat"><strong>5 wks</strong><span>Design sprint</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cs-cover fade-up" style="background: linear-gradient(135deg, #f0edf8 0%, #dcd6f0 50%, #cfc8ea 100%);">
+        <div style="text-align:center; color: var(--c-text-3);">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+          <p style="font-weight: 600; color: var(--c-text-2);">MCP Server Control Panel</p>
+          <p style="font-size: 0.875rem;">FastAPI · Python · Developer tooling</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cs-body">
+
+        <section class="fade-up">
+          <div class="section-label">01 — Problem</div>
+          <h2>Developer tools aren't exempt from UX debt</h2>
+          <p>The Model Context Protocol (MCP) defines how AI applications connect to context sources — databases, APIs, documents. The prototype MCP server I built with FastAPI had all the right capabilities: authentication, context-source management, traceability logs, LLM tool integration.</p>
+          <p>But the management interface was essentially a Swagger UI wrapper. Onboarding a new context source required reading the docs, hand-crafting JSON payloads, and debugging authentication errors with no helpful feedback. Even experienced developers were making errors on first setup.</p>
+          <div class="cs-callout">
+            <p>Good developer UX isn't about making things simpler — it's about making complex things learnable, and learnable things fast.</p>
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">02 — Research</div>
+          <h2>What developers actually need</h2>
+          <p>I interviewed 4 developers who had used or attempted to use the server during a university AI workshop. Key friction points:</p>
+          <ul>
+            <li><strong>Authentication setup</strong> was the #1 drop-off point — users didn't know which credential format to use</li>
+            <li><strong>Context source status</strong> was not visible — users had to make a test API call to verify a source was live</li>
+            <li><strong>Error messages were technical but not actionable</strong> — "422 Unprocessable Entity" told them what failed, not how to fix it</li>
+            <li><strong>No activity log</strong> — traceability existed in the backend but wasn't surfaced in the UI</li>
+          </ul>
+          <p>I also benchmarked against Supabase, Railway, and ngrok dashboards as references for developer tool UX done well.</p>
+          <div class="cs-image-block">
+            Benchmark analysis — Supabase, Railway, ngrok: patterns for status visibility + progressive disclosure
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">03 — Define</div>
+          <h2>Design goals for developer tooling</h2>
+          <ul>
+            <li><strong>Guided setup</strong> — step-by-step wizard for first-time context source configuration, not a blank form</li>
+            <li><strong>Live status at a glance</strong> — every connected source shows health status with last-checked timestamp</li>
+            <li><strong>Actionable errors</strong> — error states include a "What to do" suggestion, not just an error code</li>
+            <li><strong>Trace visibility</strong> — a paginated activity log with filterable event types (auth events, queries, errors)</li>
+          </ul>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">04 — Design</div>
+          <h2>Designing for two modes: setup and operation</h2>
+          <p>The interface separates two distinct user states: <em>first-time setup</em> (high guidance needed) and <em>ongoing operation</em> (speed and visibility needed). A step-indicator wizard handles setup; a compact dashboard handles operation.</p>
+          <p>Key design decisions:</p>
+          <ul>
+            <li><strong>Connection wizard</strong> — 4-step flow (source type → credentials → test connection → confirm) with inline validation and copy-paste credential snippets</li>
+            <li><strong>Status chips</strong> — green/amber/red status badges on each source card, with tooltip showing last successful query time</li>
+            <li><strong>Smart error recovery</strong> — the auth error state includes a collapsible "Common causes" section matched to the specific error type</li>
+            <li><strong>Activity log</strong> — filterable by event type, searchable by source name, with JSON payload expansion on click</li>
+          </ul>
+          <div class="cs-image-block">
+            Connection wizard — step 2 of 4: credential entry with format hints + live validation
+          </div>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">05 — Testing</div>
+          <h2>Validation with real developers</h2>
+          <p>I ran a task-based evaluation with 3 developers who had not used the system before:</p>
+          <ul>
+            <li>Task: "Connect a PostgreSQL database as a context source and verify it's live"</li>
+            <li>All 3 completed successfully on first attempt (vs 1 of 3 with the original Swagger UI)</li>
+            <li>Mean time reduced from 14 minutes to 5.5 minutes</li>
+            <li>Zero critical auth errors in the wizard flow (previously the most common failure)</li>
+          </ul>
+          <p>Iteration after testing: added a "copy to clipboard" button for auto-generated API keys — a simple affordance that 2 of 3 participants had manually done anyway.</p>
+        </section>
+
+        <section class="fade-up">
+          <div class="section-label">06 — Outcome</div>
+          <h2>Results</h2>
+          <ul>
+            <li>Context-source onboarding time dropped ~60%</li>
+            <li>Authentication error rate in test scenarios: 0 critical failures</li>
+            <li>Traceability features enabled faster debugging — the activity log became the first stop for diagnosing unexpected LLM behaviour</li>
+            <li>The design patterns established here directly informed the team's internal tooling conventions</li>
+          </ul>
+          <div class="cs-callout">
+            <p>Developer experience design taught me that the best interfaces are those that make the right path the obvious path — not by hiding complexity, but by sequencing it.</p>
+          </div>
+          <h3 style="margin-top: var(--sp-6); margin-bottom: var(--sp-3);">Tools used</h3>
+          <div class="cs-tools">
+            <span class="tag">Figma</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Python</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">LLM Tool Integration</span>
+            <span class="tag">Auth / JWT</span>
+          </div>
+        </section>
+
+        <nav class="cs-nav">
+          <a href="case-study-dashboard.html" class="btn btn--outline">← Healthcare Dashboard</a>
+          <a href="case-study-servo.html" class="btn btn--primary">Next: Servo App →</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">PR</span>
+      <p class="footer__copy">Pranay Rudra · Munich, 2025</p>
+      <nav class="footer__nav">
+        <a href="index.html#hero">Top</a>
+        <a href="index.html#projects">Work</a>
+        <a href="mailto:rudra.shivapranay@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
